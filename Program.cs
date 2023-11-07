@@ -1,5 +1,6 @@
 
 using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
 
 namespace API_Gateway
 {
@@ -30,6 +31,7 @@ namespace API_Gateway
 
             app.UseAuthorization();
 
+            app.UseOcelot();
 
             app.MapControllers();
 
