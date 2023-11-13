@@ -79,7 +79,7 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://api.mybusiness.com",
+    "BaseUrl": "http://localhost",
     "ServiceDiscoveryProvider": {
       "Type": "Eureka"
     }
