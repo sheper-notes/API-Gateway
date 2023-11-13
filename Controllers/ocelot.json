@@ -64,9 +64,24 @@
       ],
       "UpstreamPathTemplate": "/board/{boardId}/user",
       "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      //Create role for user for board
+      "DownstreamPathTemplate": "/board/test",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boardauth",
+        }
+      ],
+      "UpstreamPathTemplate": "/board/test",
+      "UpstreamHttpMethod": [ "GET" ]
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://api.mybusiness.com"
+    "BaseUrl": "https://api.mybusiness.com",
+    "ServiceDiscoveryProvider": {
+      "Type": "Eureka"
+    }
   }
 }
