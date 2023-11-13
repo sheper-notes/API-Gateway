@@ -17,7 +17,7 @@ namespace API_Gateway
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddOcelot().AddEureka();
+            builder.Services.AddOcelot();
 
             var app = builder.Build();
 
@@ -28,7 +28,7 @@ namespace API_Gateway
                 app.UseSwaggerUI();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
