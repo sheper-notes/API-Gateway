@@ -1,6 +1,87 @@
 {
-  "Routes": [],
+  "Routes": [
+    {
+      //Get all user's of a board
+      "DownstreamPathTemplate": "/board/{boardId}/user",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/board/{boardId}/user",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      //Get specific user of board
+      "DownstreamPathTemplate": "/board/{boardId}/user/{userId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/board/{boardId}/user/{userId}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      //Delete user from board
+      "DownstreamPathTemplate": "/board/{boardId}/user/{userId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/board/{boardId}/user/{userId}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    {
+      //Update role user from board
+      "DownstreamPathTemplate": "/board/{boardId}/user/{userId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/board/{boardId}/user/{userId}",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+    {
+      //Create role for user for board
+      "DownstreamPathTemplate": "/board/{boardId}/user",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "jsonplaceholder.typicode.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/board/{boardId}/user",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      //Create role for user for board
+      "DownstreamPathTemplate": "/board/test",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boarddb",
+        }
+      ],
+      "UpstreamPathTemplate": "/board/test",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://api.mybusiness.com"
+    "BaseUrl": "https://api.mybusiness.com",
+    "ServiceDiscoveryProvider": {
+      "Type": "Eureka"
+    }
   }
 }
