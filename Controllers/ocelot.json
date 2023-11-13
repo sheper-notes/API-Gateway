@@ -71,7 +71,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "boardauth",
+          "Host": "boarddb",
         }
       ],
       "UpstreamPathTemplate": "/board/test",
