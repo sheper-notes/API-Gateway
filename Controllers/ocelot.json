@@ -4,7 +4,7 @@
       //Get all user's of a board
       "DownstreamPathTemplate": "/swagger",
       "DownstreamScheme": "http",
-      "ServiceName": "boarddb",
+      "ServiceName": "boarddb-service",
       "UpstreamPathTemplate": "/boarddb/swagger",
       "UpstreamHttpMethod": [ "Get" ]
     }
