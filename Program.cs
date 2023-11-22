@@ -2,6 +2,7 @@
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.Provider.Eureka;
+using Ocelot.Provider.Kubernetes;
 
 namespace API_Gateway
 {
@@ -17,7 +18,7 @@ namespace API_Gateway
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddOcelot();
+            builder.Services.AddOcelot().AddKubernetes();
 
             var app = builder.Build();
 
