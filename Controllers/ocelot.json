@@ -6,7 +6,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "gateway-service.sheper.svc.cluster.local",
+          "Host": "gateway-service",
           "Port": 80
         }
       ],
