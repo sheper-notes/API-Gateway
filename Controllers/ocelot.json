@@ -4,12 +4,7 @@
       //Get all user's of a board
       "DownstreamPathTemplate": "/swagger",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "gateway-service.sheper.svc.cluster.local",
-          "Port": 80
-        }
-      ],
+      "ServiceName": "boarddb",
       "UpstreamPathTemplate": "/boarddb/swagger",
       "UpstreamHttpMethod": [ "Get" ]
     },

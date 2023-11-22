@@ -30,7 +30,7 @@ namespace API_Gateway
 
             //app.UseHttpsRedirection();
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
             app.UseOcelot();
             
