@@ -10,7 +10,7 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://api.localhost",
+    "BaseUrl": "http://api.localhost:9080",
     "ServiceDiscoveryProvider": {
       "Namespace": "sheper",
       "Type": "pollkube",
