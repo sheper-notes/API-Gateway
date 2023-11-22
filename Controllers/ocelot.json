@@ -76,7 +76,9 @@
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost",
     "ServiceDiscoveryProvider": {
-      "Type": "Eureka"
+      "Namespace": "dev",
+      "Type": "pollkube",
+      "PollingInterval": 100
     }
   }
 }
