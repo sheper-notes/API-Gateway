@@ -33,7 +33,7 @@ namespace API_Gateway
 
             //app.UseAuthorization();
 
-            app.UseOcelot();
+            app.UseOcelot().Wait();
             
 
             app.MapControllers();
