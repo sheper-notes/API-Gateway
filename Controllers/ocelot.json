@@ -2,15 +2,15 @@
   "Routes": [
     {
       //Get all user's of a board
-      "DownstreamPathTemplate": "/board/{boardId}/user",
-      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/boarddb/swagger",
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "jsonplaceholder.typicode.com",
-          "Port": 443
+          "Host": "gateway-service.sheper.svc.cluster.local",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/board/{boardId}/user",
+      "UpstreamPathTemplate": "/swagger",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
