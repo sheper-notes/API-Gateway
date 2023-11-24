@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "swagger/index.html",
+      "DownstreamPathTemplate": "/{url}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -9,19 +9,7 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/boarddb/swagger",
-      "UpstreamHttpMethod": [ "Get" ]
-    },
-    {
-      "DownstreamPathTemplate": "swagger/",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "boarddb-service.default.svc.cluster.local",
-          "Port": 80
-        }
-      ],
-      "UpstreamPathTemplate": "/boarddba/swagger",
+      "UpstreamPathTemplate": "/boarddb/{url}",
       "UpstreamHttpMethod": [ "Get" ]
     }
     //{
