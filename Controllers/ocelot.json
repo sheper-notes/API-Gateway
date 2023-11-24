@@ -1,20 +1,44 @@
 {
   "Routes": [
     {
-      //Get all user's of a board
-      "DownstreamPathTemplate": "/swagger/index.html",
+      "DownstreamPathTemplate": "swagger/index.html",
       "DownstreamScheme": "http",
-      "ServiceName": "boarddb-service",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boarddb-service.default.svc.cluster.local",
+          "Port": 80
+        }
+      ],
       "UpstreamPathTemplate": "/boarddb/swagger",
       "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "swagger/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boarddb-service.default.svc.cluster.local",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/boarddba/swagger",
+      "UpstreamHttpMethod": [ "Get" ]
     }
+    //{
+    //  //Get all user's of a board
+    //  "DownstreamPathTemplate": "/swagger/index.html",
+    //  "DownstreamScheme": "http",
+    //  "ServiceName": "boarddb-service",
+    //  "UpstreamPathTemplate": "/boarddb/swagger",
+    //  "UpstreamHttpMethod": [ "Get" ]
+    //}
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://api.localhost:9080",
-    "ServiceDiscoveryProvider": {
-      "Namespace": "default",
-      "Type": "pollkube",
-      "PollingInterval": 100
-    }
+    //"ServiceDiscoveryProvider": {
+    //  "Namespace": "default",
+    //  "Type": "pollkube",
+    //  "PollingInterval": 100
+    //}
   }
 }
