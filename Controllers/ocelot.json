@@ -2,7 +2,7 @@
   "Routes": [
     {
       //Get all user's of a board
-      "DownstreamPathTemplate": "/swagger",
+      "DownstreamPathTemplate": "/swagger/index.html",
       "DownstreamScheme": "http",
       "ServiceName": "boarddb-service",
       "UpstreamPathTemplate": "/boarddb/swagger",
@@ -12,7 +12,7 @@
   "GlobalConfiguration": {
     "BaseUrl": "http://api.localhost:9080",
     "ServiceDiscoveryProvider": {
-      "Namespace": "sheper",
+      "Namespace": "default",
       "Type": "pollkube",
       "PollingInterval": 100
     }
