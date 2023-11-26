@@ -1,7 +1,7 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamPathTemplate": "/api/auth/test/",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -9,7 +9,7 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/bauth/{everything}",
+      "UpstreamPathTemplate": "/bauth/test/",
       "UpstreamHttpMethod": [ "Get" ]
     }
     //{
