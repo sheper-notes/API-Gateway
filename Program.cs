@@ -18,6 +18,7 @@ namespace API_Gateway
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Configuration.AddJsonFile("Controllers/ocelot.json");
             builder.Services.AddOcelot().AddKubernetes();
 
             var app = builder.Build();
