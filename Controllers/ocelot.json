@@ -3,6 +3,7 @@
     {
       "DownstreamPathTemplate": "/api/auth/test/",
       "DownstreamScheme": "http",
+      "DownstreamHttpMethod": [ "Get" ],
       "DownstreamHostAndPorts": [
         {
           "Host": "boardauth-service.default.svc.cluster.local",
