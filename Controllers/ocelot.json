@@ -5,11 +5,11 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "boarddb-service.default.svc.cluster.local",
+          "Host": "boardauth-service.default.svc.cluster.local",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/boarddb/{everything}",
+      "UpstreamPathTemplate": "/bauth/{everything}",
       "UpstreamHttpMethod": [ "Get" ]
     }
     //{
