@@ -24,6 +24,7 @@
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://api.localhost:9080",
+    "RequestIdKey": "OcRequestId"
     //"ServiceDiscoveryProvider": {
     //  "Namespace": "default",
     //  "Type": "pollkube",
