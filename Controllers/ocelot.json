@@ -23,11 +23,13 @@
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://api.localhost:9080",
-    "RequestIdKey": "OcRequestId"
-    //"ServiceDiscoveryProvider": {
-    //  "Namespace": "default",
-    //  "Type": "pollkube",
-    //  "PollingInterval": 100
-    //}
+    "RequestIdKey": "OcRequestId",
+    "RateLimitOptions": {
+      "ClientWhitelist": [],
+      "EnableRateLimiting": true,
+      "Period": "1s",
+      "PeriodTimespan": 60,
+      "Limit": 10
+    }
   }
 }
