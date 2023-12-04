@@ -1,7 +1,7 @@
 {
   "Routes": [
-    {
-      "DownstreamPathTemplate": "/api/auth/test/",
+    { //Get auth token for board
+      "DownstreamPathTemplate": "/api/auth/{boardId}/",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -9,17 +9,130 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/auth/test/",
+      "UpstreamPathTemplate": "/api/auth/{boardId}/",
       "UpstreamHttpMethod": [ "Get" ]
+    },
+    { //Get boards for user
+      "DownstreamPathTemplate": "/api/boards/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boardsettings-service.default.svc.cluster.local",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/boards/",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    { //Get user for board
+      "DownstreamPathTemplate": "/api/user/{boardId}/{userId}/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boardsettings-service.default.svc.cluster.local",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/boards/{boardId}/user/{userId}/",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    { //Get all users for board
+      "DownstreamPathTemplate": "/api/user/{boardId}/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boardsettings-service.default.svc.cluster.local",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/boards/{boardId}/user/",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    { //Delete user from board
+      "DownstreamPathTemplate": "/api/user/{boardId}/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boardsettings-service.default.svc.cluster.local",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/boards/{boardId}/user/{userId}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    { //Delete user from board
+      "DownstreamPathTemplate": "/api/user/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boardsettings-service.default.svc.cluster.local",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/boards/user/",
+      "UpstreamHttpMethod": [ "Put" ]
+    },
+    { //Delete user from board
+      "DownstreamPathTemplate": "/api/user/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boardsettings-service.default.svc.cluster.local",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/boards/user/",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    { //Get objects of a board
+      "DownstreamPathTemplate": "/api/board/{id}/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boarddb-service.default.svc.cluster.local",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/board/",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    { //Creates objects on a board
+      "DownstreamPathTemplate": "/api/board/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boarddb-service.default.svc.cluster.local",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/board/",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    { //Creates objects on a board
+      "DownstreamPathTemplate": "/api/board/{id}/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boarddb-service.default.svc.cluster.local",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/board/{id}/",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    { //Update objects on a board
+      "DownstreamPathTemplate": "/api/board/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boarddb-service.default.svc.cluster.local",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/board/",
+      "UpstreamHttpMethod": [ "Put" ]
     }
-    //{
-    //  //Get all user's of a board
-    //  "DownstreamPathTemplate": "/swagger/index.html",
-    //  "DownstreamScheme": "http",
-    //  "ServiceName": "boarddb-service",
-    //  "UpstreamPathTemplate": "/boarddb/swagger",
-    //  "UpstreamHttpMethod": [ "Get" ]
-    //}
+
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://api.localhost:9080",
