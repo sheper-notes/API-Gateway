@@ -10,7 +10,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/auth/{boardId}/",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
     },
     { //Get boards for user
       "DownstreamPathTemplate": "/api/boards/",
@@ -22,7 +25,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/boards/",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
     },
     { //Get user for board
       "DownstreamPathTemplate": "/api/user/{boardId}/{userId}/",
@@ -34,7 +40,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/boards/{boardId}/user/{userId}/",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
     },
     { //Get all users for board
       "DownstreamPathTemplate": "/api/user/{boardId}/",
@@ -46,7 +55,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/boards/{boardId}/user/",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
     },
     { //Delete user from board
       "DownstreamPathTemplate": "/api/user/{boardId}/{userId}",
@@ -58,7 +70,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/boards/{boardId}/user/{userId}",
-      "UpstreamHttpMethod": [ "Delete" ]
+      "UpstreamHttpMethod": [ "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
     },
     { //Delete user from board
       "DownstreamPathTemplate": "/api/user/",
@@ -70,7 +85,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/boards/user/",
-      "UpstreamHttpMethod": [ "Put" ]
+      "UpstreamHttpMethod": [ "Put" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
     },
     { //Delete user from board
       "DownstreamPathTemplate": "/api/user/",
@@ -82,7 +100,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/boards/user/",
-      "UpstreamHttpMethod": [ "Post" ]
+      "UpstreamHttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
     },
     { //Get objects of a board
       "DownstreamPathTemplate": "/api/board/{id}/",
@@ -94,7 +115,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/board/",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
     },
     { //Creates objects on a board
       "DownstreamPathTemplate": "/api/board/",
@@ -106,7 +130,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/board/",
-      "UpstreamHttpMethod": [ "Post" ]
+      "UpstreamHttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
     },
     { //Creates objects on a board
       "DownstreamPathTemplate": "/api/board/{id}/",
@@ -118,7 +145,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/board/{id}/",
-      "UpstreamHttpMethod": [ "Delete" ]
+      "UpstreamHttpMethod": [ "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
     },
     { //Update objects on a board
       "DownstreamPathTemplate": "/api/board/",
@@ -130,7 +160,25 @@
         }
       ],
       "UpstreamPathTemplate": "/api/board/",
-      "UpstreamHttpMethod": [ "Put" ]
+      "UpstreamHttpMethod": [ "Put" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+      }
+    },
+    { //Update objects on a board
+      "DownstreamPathTemplate": "/api/BoardObject/Test",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5030
+        }
+      ],
+      "UpstreamPathTemplate": "/test/test/",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+      }
     }
 
   ],
@@ -141,7 +189,7 @@
       "ClientWhitelist": [],
       "EnableRateLimiting": true,
       "Period": "1s",
-      "PeriodTimespan": 60,
+      "PeriodTimespan": 3,
       "Limit": 10
     }
   }
