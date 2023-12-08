@@ -16,6 +16,9 @@ namespace API_Gateway
             var auth0Domain = $"https://{builder.Configuration.GetValue<string>("auth0Domain")}/";
             var auth0Audience = builder.Configuration.GetValue<string>("auth0Audience");
             var authenticationProviderKey = "TestKey";
+            Console.WriteLine("Loaded: " + corsOrigin);
+            Console.WriteLine("Loaded: " + auth0Domain);
+            Console.WriteLine("Loaded: " + auth0Audience);
 
             var corsPolicy = "SheperCorsPolicy";
             // Add services to the container.
