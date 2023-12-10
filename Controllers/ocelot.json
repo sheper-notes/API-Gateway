@@ -11,24 +11,24 @@
       ],
       "UpstreamPathTemplate": "/api/auth/{boardId}/",
       "UpstreamHttpMethod": [ "Get" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer"
-      }
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //}
     },
     { //Get boards for user
-      "DownstreamPathTemplate": "/api/boards/",
+      "DownstreamPathTemplate": "/api/board/",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "boardsettings-service.default.svc.cluster.local",
-          "Port": 80
+          "Host": "localhost",
+          "Port": 5036
         }
       ],
       "UpstreamPathTemplate": "/api/boards/",
       "UpstreamHttpMethod": [ "Get" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer"
-      }
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //}
     },
     { //Get user for board
       "DownstreamPathTemplate": "/api/user/{boardId}/{userId}/",
@@ -41,9 +41,9 @@
       ],
       "UpstreamPathTemplate": "/api/boards/{boardId}/user/{userId}/",
       "UpstreamHttpMethod": [ "Get" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer"
-      }
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //}
     },
     { //Get all users for board
       "DownstreamPathTemplate": "/api/user/{boardId}/",
@@ -56,9 +56,9 @@
       ],
       "UpstreamPathTemplate": "/api/boards/{boardId}/user/",
       "UpstreamHttpMethod": [ "Get" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer"
-      }
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //}
     },
     { //Delete user from board
       "DownstreamPathTemplate": "/api/user/{boardId}/{userId}",
@@ -71,9 +71,9 @@
       ],
       "UpstreamPathTemplate": "/api/boards/{boardId}/user/{userId}",
       "UpstreamHttpMethod": [ "Delete" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer"
-      }
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //}
     },
     { //Delete user from board
       "DownstreamPathTemplate": "/api/user/",
@@ -86,9 +86,9 @@
       ],
       "UpstreamPathTemplate": "/api/boards/user/",
       "UpstreamHttpMethod": [ "Put" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer"
-      }
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //}
     },
     { //Delete user from board
       "DownstreamPathTemplate": "/api/user/",
@@ -101,9 +101,9 @@
       ],
       "UpstreamPathTemplate": "/api/boards/user/",
       "UpstreamHttpMethod": [ "Post" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer"
-      }
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //}
     },
     { //Get objects of a board
       "DownstreamPathTemplate": "/api/board/{id}/",
@@ -116,24 +116,9 @@
       ],
       "UpstreamPathTemplate": "/api/board/",
       "UpstreamHttpMethod": [ "Get" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer"
-      }
-    },
-    { //Creates objects on a board
-      "DownstreamPathTemplate": "/api/board/",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "boarddb-service.default.svc.cluster.local",
-          "Port": 80
-        }
-      ],
-      "UpstreamPathTemplate": "/api/board/",
-      "UpstreamHttpMethod": [ "Post" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer"
-      }
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //}
     },
     { //Creates objects on a board
       "DownstreamPathTemplate": "/api/board/{id}/",
@@ -146,9 +131,9 @@
       ],
       "UpstreamPathTemplate": "/api/board/{id}/",
       "UpstreamHttpMethod": [ "Delete" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer"
-      }
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //}
     },
     { //Update objects on a board
       "DownstreamPathTemplate": "/api/board/",
@@ -161,9 +146,9 @@
       ],
       "UpstreamPathTemplate": "/api/board/",
       "UpstreamHttpMethod": [ "Put" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer"
-      }
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer"
+      //}
     },
     { //Update objects on a board
       "DownstreamPathTemplate": "/api/BoardObject/Test",
@@ -176,9 +161,9 @@
       ],
       "UpstreamPathTemplate": "/test/test/",
       "UpstreamHttpMethod": [ "Get" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer",
-      }
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //}
     }
 
   ],
