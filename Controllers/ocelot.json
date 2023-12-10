@@ -168,7 +168,7 @@
 
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://api.simoncox.nl",
+    "BaseUrl": "http://simoncox.nl",
     //"RequestIdKey": "OcRequestId",
     //"RateLimitOptions": {
     //  "ClientWhitelist": [],
