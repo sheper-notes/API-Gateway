@@ -1,5 +1,18 @@
 {
   "Routes": [
+    {
+      "UpstreamPathTemplate": "/",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/BoardObject/Test",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "boarddb-service.default.svc.cluster.local",
+          "Port": 80
+        }
+      ]
+      // "ServiceName": "sublime-gateway",
+    },
     { //Get auth token for board
       "DownstreamPathTemplate": "/api/auth/{boardId}/",
       "DownstreamScheme": "http",
@@ -114,8 +127,8 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/board/",
-      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamPathTemplate": "/api/board/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
       //"AuthenticationOptions": {
       //  "AuthenticationProviderKey": "Bearer"
       //}
