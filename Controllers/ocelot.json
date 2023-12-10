@@ -3,7 +3,7 @@
     {
       "UpstreamPathTemplate": "/",
       "UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/api/BoardObject/Test",
+      "DownstreamPathTemplate": "/api/BoardObject/3",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
