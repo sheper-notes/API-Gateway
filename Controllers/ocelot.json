@@ -168,7 +168,7 @@
 
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://api.localhost:9080",
+    "BaseUrl": "http://api.simoncox.nl",
     //"RequestIdKey": "OcRequestId",
     //"RateLimitOptions": {
     //  "ClientWhitelist": [],

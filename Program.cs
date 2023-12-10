@@ -17,7 +17,6 @@ namespace API_Gateway
             var auth0Audience = builder.Configuration.GetValue<string>("auth0Audience");
             auth0Audience = "https://sheper.eu.auth0.com/api/v2/";
             auth0Domain = "sheper.eu.auth0.com";
-            corsOrigin = "http://localhost:9080";
             var authenticationProviderKey = "TestKey";
             Console.WriteLine("Loaded: " + corsOrigin);
             Console.WriteLine("Loaded: " + auth0Domain);
