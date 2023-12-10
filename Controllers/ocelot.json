@@ -169,13 +169,13 @@
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://api.localhost:9080",
-    "RequestIdKey": "OcRequestId",
-    "RateLimitOptions": {
-      "ClientWhitelist": [],
-      "EnableRateLimiting": true,
-      "Period": "1s",
-      "PeriodTimespan": 3,
-      "Limit": 10
-    }
+    //"RequestIdKey": "OcRequestId",
+    //"RateLimitOptions": {
+    //  "ClientWhitelist": [],
+    //  "EnableRateLimiting": true,
+    //  "Period": "1s",
+    //  "PeriodTimespan": 3,
+    //  "Limit": 10
+    //}
   }
 }
