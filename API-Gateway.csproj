@@ -14,7 +14,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.14" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.4" />
-    <PackageReference Include="Ocelot" Version="20.0.0" />
+    <PackageReference Include="Ocelot" Version="22.0.1" />
     <PackageReference Include="Ocelot.Provider.Eureka" Version="20.0.0" />
     <PackageReference Include="Ocelot.Provider.Kubernetes" Version="20.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />

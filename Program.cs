@@ -1,9 +1,6 @@
-
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
-using Ocelot.Provider.Eureka;
-using Ocelot.Provider.Kubernetes;
 
 namespace API_Gateway
 {
