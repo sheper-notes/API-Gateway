@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker Image Build Main
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
       name: Build and push
       uses: docker/build-push-action@v5
       with:
-        context: .
+        context: ./
         file: ./Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:latest
