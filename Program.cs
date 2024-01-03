@@ -64,8 +64,8 @@ namespace API_Gateway
             app.UseAuthentication();
 
             app.UseOcelot().Wait();
-            
 
+            app.UseMiddleware<XSSMiddleware>();
 
             app.MapControllers();
 
